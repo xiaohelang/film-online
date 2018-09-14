@@ -1,0 +1,35 @@
+@import "./layout.scss";
+
+@mixin btn( $size:28px,$color:#fff,$bgcolor:-webkit-linear-gradient(right bottom, #6F85FF , #54AAFF),$radius:40px, $width: 104px, $height: 56px ) {
+    width: $width;
+    height: $height;
+    background: $bgcolor;
+    border-radius: $radius;
+    border: 1px solid $bgcolor;
+    font-size: $size;
+    color: $color;
+    line-height: 60px;
+    text-align: center;
+    display: inline-block;
+}
+
+@mixin list($direction:column) {
+    @include flex($direction);
+}
+
+@mixin panel($bgcolor:#fff,$padding:0,$margin:20px 0,$height:96px,$txtPadding:0 32px,$color:#333,$fontSize:32px) {
+    background: $bgcolor;
+    padding: $padding;
+    margin: $margin;
+    >h4{
+        height: $height;
+        line-height: $height;
+        padding: $txtPadding;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        text-align: left;
+        color: $color;
+        font-size: $fontSize
+    }
+}
